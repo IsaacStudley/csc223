@@ -46,9 +46,14 @@ string render_pretty(Node* node, string(*ren)(Node*)) {
     return "("+ ren(node) +")";
 }
 
-Node* remove_second(Node* node) {
-    Node* node2 = node->next;
-    node->next = node->next->next;
-    node2->next = nullptr;
-    return node;
+Node* remove_second(Node* list) {
+    Node* first = list;
+    Node* second = list->next;
+
+    // make the first node point to the third
+    first->next = second->next;
+
+    // remove the second node from the list and return a pointer to it
+    second->next = nullptr;
+    return second;
 }
