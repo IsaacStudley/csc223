@@ -12,3 +12,8 @@ struct Node {
     // member functions
     string to_string();
 };
+    string render_list(Node*);
+    string render_list_backward(Node*);
+    string render_pretty(Node*, string(*ren)(Node*));
+
+    Node* remove_second(Node*);
