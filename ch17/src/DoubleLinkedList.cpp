@@ -8,10 +8,11 @@ Node::Node()
     next = nullptr;
 }
 
-Node::Node(int cargo)
+
+Node::Node(int c)
 {
-    this->cargo = cargo;
-    next = nullptr;
+    cargo = c;
+    prev = next = nullptr;   
 }
 
 Node::Node(int cargo, Node* next)
