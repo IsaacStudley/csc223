@@ -8,6 +8,7 @@ class Queue {
     int first;
     int last;
     T items[MAX_SIZE];
+    int v;
 
 public:
     Queue() {
@@ -34,6 +35,9 @@ public:
 
     bool empty() const {
         return first == last;
+    }
+    bool priority() const {
+        return v;
     }
 };
 #endif // QUEUE_H
