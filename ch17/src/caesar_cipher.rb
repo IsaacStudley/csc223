@@ -7,7 +7,9 @@ def caesar_cipher(string, key)
       ciphered_string << c
       next
     end
-    key.times { c.next! } 
+    key.times do
+      c.next!  
+    end
     # when it wraps from z to a it becomes something like: 'aa', 'ab', etc.
     # this cuts the first 'a' after wrapping
     c[0] = '' if c.length > 1
@@ -20,4 +22,4 @@ puts "Enter String"
 text = gets.chomp
 puts "Enter Shift Factor"
 num = gets.chomp
-puts caesar_cipher(text, num) 
+puts caesar_cipher(text, Integer(num)) 
