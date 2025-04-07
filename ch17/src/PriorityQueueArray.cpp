@@ -15,7 +15,7 @@ public:
         first = 0;
         last = 0;
     }
-
+ 
     void insert(const T& value) {
         if ((last + 1) % MAX_SIZE == first) {
             throw std::overflow_error("No more space in queue");

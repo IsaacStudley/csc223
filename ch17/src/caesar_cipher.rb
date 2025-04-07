@@ -1,4 +1,4 @@
-def caesar_cipher(string, key) #from internet
+def caesar_cipher(string, key)  
   ciphered_string = ''
   string.each_char do |c|
     # if non-word character such as punctuation push it to ciphered_string
@@ -13,5 +13,11 @@ def caesar_cipher(string, key) #from internet
     c[0] = '' if c.length > 1
     ciphered_string << c
   end
-  ciphered_string
+  return ciphered_string
 end
+
+puts "Enter String"
+text = gets.chomp
+puts "Enter Shift Factor"
+num = gets.chomp
+puts caesar_cipher(text, num) 
