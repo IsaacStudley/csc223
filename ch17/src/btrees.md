@@ -21,6 +21,16 @@ A B Tree of order m can be defined as an m-way search tree which satisfies the f
 
 <img width="780" img title="btrees" alt="Alt text" src="btree.png">
 
+## Other notes
+
+- A B-tree must always obey the above definiton and be a search tree, so when inserting and deleting from a B-tree a special algorithm is used to insure that the B-tree still is correct
+
+- This algorithm is complicated, geeks for geeks's exampile is >600 lines long, but it is still usualy worth it computationally over normal binary search trees 
+
+## 
+
+<img width="480" img title="btrees2" alt="Alt text" src="btree2.png">
+
 #### References
 
 - https://www.geeksforgeeks.org/introduction-of-b-tree-2/
